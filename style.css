@@ -1,0 +1,42 @@
+/* details[open] summary ~ * {
+  animation: sweep_in 0.5s ease-in-out;
+}
+
+details::not[open] summary ~ * {
+  animation: sweep_out 0.5s ease-in-out;
+}
+
+@keyframes sweep_in {
+  0% {
+    opacity: 0;
+    margin-left: -10px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0px;
+  }
+}
+
+@keyframes sweep_out {
+  0% {
+    opacity: 1;
+    margin-left: 10px;
+  }
+  100% {
+    opacity: 0;
+    margin-left: 0px;
+  }
+} */
+
+details {
+  transition: height 1s ease;
+  overflow: hidden;
+}
+
+details:not([open]) {
+  height: 0.5em;
+}
+
+details[open] {
+  height: 6em;
+}
